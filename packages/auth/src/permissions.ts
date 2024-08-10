@@ -11,7 +11,7 @@ type PermissionsByRole = (
 
 export const permissions: Record<Role, PermissionsByRole> = {
 	ADMIN(user, { can, cannot }) {
-		can('manage', 'User')
+		can('manage', 'all')
 
 		cannot(['transfer_ownership', 'update'], 'Organization') // i cant put the condition in a cannot option when a give the manage role
 		can(['transfer_ownership', 'update'], 'Organization', {
@@ -20,8 +20,11 @@ export const permissions: Record<Role, PermissionsByRole> = {
 	},
 	MEMBER(user, { can }) {
 		// nevar user manage all
+		can('get', 'User')
 		can(['create', 'get'], 'Project')
 		can(['update', 'delete'], 'Project', { ownerId: { $eq: user.id } })
 	},
-	BILLING() {},
+	BILLING(_, { can }) {
+		can('manage', 'Billing')
+	},
 }
