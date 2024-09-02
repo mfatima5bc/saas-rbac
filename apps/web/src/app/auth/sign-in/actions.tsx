@@ -1,9 +1,9 @@
 'use server'
 import { HTTPError } from 'ky'
+import { cookies } from 'next/headers'
 import { z } from 'zod'
 
-import { signInWithPassword } from '@/app/http/sign-in-with-password'
-import { cookies } from 'next/headers'
+import { signInWithPassword } from '@/http/sign-in-with-password'
 
 const signInSchema = z.object({
 	email: z
