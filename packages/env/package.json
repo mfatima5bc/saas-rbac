@@ -1,7 +1,7 @@
 {
   "name": "@saas/env",
   "version": "0.0.0",
-  "private": false,
+  "private": true,
   "main": "index.ts",
   "types": "index.ts",
   "devDependencies": {
