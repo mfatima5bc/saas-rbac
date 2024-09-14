@@ -4,7 +4,7 @@ import type { Metadata } from 'next'
 import { ThemeProvider } from 'next-themes'
 
 export const metadata: Metadata = {
-	title: 'Create Next App',
+	title: 'Satellite',
 }
 
 export default function RootLayout({
