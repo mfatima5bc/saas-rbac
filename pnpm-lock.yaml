@@ -114,6 +114,9 @@ importers:
       '@saas/env':
         specifier: workspace:*
         version: link:../../packages/env
+      '@tanstack/react-query':
+        specifier: ^5.56.2
+        version: 5.56.2(react@19.0.0-rc-f994737d14-20240522)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0
@@ -1683,6 +1686,19 @@ packages:
       '@t3-oss/env-core': 0.11.0(typescript@5.4.5)(zod@3.23.8)
       typescript: 5.4.5
       zod: 3.23.8
+    dev: false
+
+  /@tanstack/query-core@5.56.2:
+    resolution: {integrity: sha512-gor0RI3/R5rVV3gXfddh1MM+hgl0Z4G7tj6Xxpq6p2I03NGPaJ8dITY9Gz05zYYb/EJq9vPas/T4wn9EaDPd4Q==}
+    dev: false
+
+  /@tanstack/react-query@5.56.2(react@19.0.0-rc-f994737d14-20240522):
+    resolution: {integrity: sha512-SR0GzHVo6yzhN72pnRhkEFRAHMsUo5ZPzAxfTMvUxFIDVS6W9LYUp6nXW3fcHVdg0ZJl8opSH85jqahvm6DSVg==}
+    peerDependencies:
+      react: ^18 || ^19
+    dependencies:
+      '@tanstack/query-core': 5.56.2
+      react: 19.0.0-rc-f994737d14-20240522
     dev: false
 
   /@types/bcryptjs@2.4.6:
