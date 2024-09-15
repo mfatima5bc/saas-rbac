@@ -28,6 +28,7 @@ import { getMembers } from './routes/members/get-members'
 import { removeMember } from './routes/members/remove-member'
 import { updateMember } from './routes/members/update-member'
 import { createOrganization } from './routes/orgs/create-organization'
+import { getMembership } from './routes/orgs/get-mermbership'
 import { getOrganization } from './routes/orgs/get-organization'
 import { getOrganizations } from './routes/orgs/get-organizations'
 import { shutdownOrganization } from './routes/orgs/shutdown-organization'
@@ -95,6 +96,7 @@ app.register(authenticateWithGithub)
 app.register(createOrganization)
 app.register(getOrganization)
 app.register(getOrganizations)
+app.register(getMembership)
 app.register(updateOrganization)
 app.register(shutdownOrganization)
 app.register(transferOrganization)
